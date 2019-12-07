@@ -10,17 +10,24 @@ public class Ball : MonoBehaviour
     public int score = 0;
     public TMP_Text ScoreUI;
 
+    public Rigidbody2D rb;
+    bool gameStarted = false;
+
     void Start()
-    {
-        float x = (Random.Range(0, 2) == 0) ? -1 : 1; //init movement vector path
-        float y = (Random.Range(0, 2) == 0) ? -1 : 1;
+    { 
 
-        GetComponent<Rigidbody>().velocity = new Vector3(x, y, 0);
-        GetComponent<Rigidbody>().velocity *= speed; //init speed
     }
-
+    void Update(){
+        if(Input.GetKeyUp(KeyCode.Space)&& gameStarted == false){
+            transform.SetParent(null);
+            rb.isKinematic = false;
+            rb.AddForce(new Vector2(speed,speed));
+            gameStarted = true;
+        }
+    }
     private void OnCollisionEnter(Collision collision)
     {
+        /*
         if (collision.gameObject.name == "SideWallB")
         {
             score = 0;  //lose,make new scene
@@ -33,5 +40,6 @@ public class Ball : MonoBehaviour
             collision.gameObject.SetActive(false);
             ScoreUI.text = (++score).ToString();
         }
+        */
     }
 }
