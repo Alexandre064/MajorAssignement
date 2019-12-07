@@ -18,7 +18,10 @@ public class Anwser : MonoBehaviour
             //nothing happens?
         }
         //Go to main scene
-        SceneManager.LoadScene("Game");
+        int nb;
+        nb = Random.Range(0, 3);
+        GameObject.Find("Canvas").GetComponent<Quizz>().askQuestion(nb);
+        //SceneManager.LoadScene("Game");
     }
 
 }

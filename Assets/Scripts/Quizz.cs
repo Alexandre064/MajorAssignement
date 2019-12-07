@@ -13,7 +13,7 @@ public class Quizz : MonoBehaviour
     public string Anwser;
 
     private int randNb;
-    string[] QuizzList = new string[2];
+    string[] QuizzList = new string[7];
     public int score = 0;
     private Text textScore;
     
@@ -33,11 +33,11 @@ public class Quizz : MonoBehaviour
         //Adding questions to quizz
         QuizzList[0] = "What is our teacher name?,Juan,Philip,Roman,Louis,Roman";
         QuizzList[1] = "6 x 4?,8,24,10,42,24";
-        QuizzList[2] = "What is the most common tree in Estonia?, ";
-        QuizzList[3] = "";
-        QuizzList[4] = "";
-        QuizzList[5] = "";
-        QuizzList[6] = "";
+        QuizzList[2] = "What is the most common tree in Estonia?,1,2,3,4,1";
+        QuizzList[3] = "What is the most common tree in Estonia?,1,2,3,4,1";
+        QuizzList[4] = "What is the most common tree in Estonia?,1,2,3,4,1";
+        QuizzList[5] = "What is the most common tree in Estonia?,1,2,3,4,1";
+        QuizzList[6] = "What is the most common tree in Estonia?,1,2,3,4,1";
 
         randNb = Random.Range(0, QuizzList.Length);
         askQuestion(randNb);
