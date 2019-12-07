@@ -284,7 +284,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 291878015}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.42, y: -3.08, z: 0}
+  m_LocalPosition: {x: -3.42, y: -2.08, z: 0}
   m_LocalScale: {x: 4.673729, y: 1.9512981, z: 1}
   m_Children:
   - {fileID: 385439475}
@@ -546,7 +546,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Score
+  m_Text: 'Score :'
 --- !u!222 &729725609
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -826,7 +826,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950432267}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.3850002, y: -0.24000001, z: 0}
+  m_LocalPosition: {x: -3.3850002, y: 0.76, z: 0}
   m_LocalScale: {x: 4.673729, y: 1.9512981, z: 1}
   m_Children:
   - {fileID: 1580671154}
@@ -932,7 +932,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1113852348}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.44, y: -0.24000001, z: 0}
+  m_LocalPosition: {x: 3.44, y: 0.76, z: 0}
   m_LocalScale: {x: 4.673729, y: 1.9512981, z: 1}
   m_Children:
   - {fileID: 906650011}
@@ -1153,7 +1153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1513260538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.44, y: -2.97, z: 0}
+  m_LocalPosition: {x: 3.44, y: -1.97, z: 0}
   m_LocalScale: {x: 4.673729, y: 1.9512981, z: 1}
   m_Children:
   - {fileID: 741317503}

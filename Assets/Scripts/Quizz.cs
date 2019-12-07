@@ -33,8 +33,14 @@ public class Quizz : MonoBehaviour
         //Adding questions to quizz
         QuizzList[0] = "What is our teacher name?,Juan,Philip,Roman,Louis,Roman";
         QuizzList[1] = "6 x 4?,8,24,10,42,24";
+        QuizzList[2] = "What is the most common tree in Estonia?, ";
+        QuizzList[3] = "";
+        QuizzList[4] = "";
+        QuizzList[5] = "";
+        QuizzList[6] = "";
 
-        askQuestion();
+        randNb = Random.Range(0, QuizzList.Length);
+        askQuestion(randNb);
     }
 
     // Update is called once per frame
@@ -43,10 +49,9 @@ public class Quizz : MonoBehaviour
         textScore.text = "score: " + score;
     }
 
-    public void askQuestion()
+    public void askQuestion(int nb)
     {
-        randNb = Random.Range(0, QuizzList.Length);
-        string[] col = QuizzList[randNb].Split(',');
+        string[] col = QuizzList[nb].Split(',');
         textQuestion.text = col[0];
         textRep1.text = col[1];
         textRep2.text = col[2];
