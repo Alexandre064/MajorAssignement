@@ -6,9 +6,7 @@ using UnityEngine.UI;
 
 public class Ball : MonoBehaviour
 {
-    public float speed = 5f;
-    public int score = 0;
-    public TMP_Text ScoreUI;
+    public float force;
 
     public Rigidbody2D rb;
     bool gameStarted = false;
@@ -21,25 +19,13 @@ public class Ball : MonoBehaviour
         if(Input.GetKeyUp(KeyCode.Space)&& gameStarted == false){
             transform.SetParent(null);
             rb.isKinematic = false;
-            rb.AddForce(new Vector2(speed,speed));
+            rb.AddForce(new Vector2(force,force));
             gameStarted = true;
         }
     }
-    private void OnCollisionEnter(Collision collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        /*
-        if (collision.gameObject.name == "SideWallB")
-        {
-            score = 0;  //lose,make new scene
-        }
-        else if (collision.gameObject.name != "Bumper" 
-            && collision.gameObject.name != "SideWallR" 
-            && collision.gameObject.name != "SideWallL" 
-            && collision.gameObject.name != "SideWallT" )
-        {
-            collision.gameObject.SetActive(false);
-            ScoreUI.text = (++score).ToString();
-        }
-        */
+        Debug.Log(rb.velocity);
+        //rb.AddForce(new Vector2(0,force));        
     }
 }
