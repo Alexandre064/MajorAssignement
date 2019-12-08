@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - ui
+  - quizer
   layers:
   - Default
   - TransparentFX

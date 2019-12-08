@@ -14,10 +14,18 @@ public class Quizz : MonoBehaviour
 
     private int randNb;
     string[] QuizzList = new string[7];
+<<<<<<< Updated upstream
+=======
+    public int score = 0;
+    private Text textScore;
+
+    int currentQuizNumber = 0;
+>>>>>>> Stashed changes
     
     // Start is called before the first frame update
     void Start()
     {
+        Debug.Log(currentQuizNumber);
         //Components
         textQuestion = GameObject.Find("TextQuestion").GetComponent<Text>();
 
@@ -42,7 +50,11 @@ public class Quizz : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< Updated upstream
 
+=======
+        //textScore.text = "score: " + score;
+>>>>>>> Stashed changes
     }
 
     public void askQuestion(int nb)
@@ -55,5 +67,9 @@ public class Quizz : MonoBehaviour
         textRep4.text = col[4];
         Anwser = col[5];
 
+    }
+    public void currentQuiz(){
+        Debug.Log("tto");
+        //currentQuizNumber = value;
     }
 }
