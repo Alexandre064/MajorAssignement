@@ -14,8 +14,6 @@ public class Quizz : MonoBehaviour
 
     private int randNb;
     string[] QuizzList = new string[7];
-    public int score = 0;
-    private Text textScore;
     
     // Start is called before the first frame update
     void Start()
@@ -28,8 +26,6 @@ public class Quizz : MonoBehaviour
         textRep3 = GameObject.Find("TxtRep3").GetComponent<TextMesh>();
         textRep4 = GameObject.Find("TxtRep4").GetComponent<TextMesh>();
 
-        textScore = GameObject.Find("TextScore").GetComponent<Text>();
-
         //Adding questions to quizz
         QuizzList[0] = "What is our teacher name?,Juan,Philip,Roman,Louis,Roman";
         QuizzList[1] = "6 x 4?,8,24,10,42,24";
@@ -39,14 +35,14 @@ public class Quizz : MonoBehaviour
         QuizzList[5] = "What is the most common tree in Estonia?,1,2,3,4,1";
         QuizzList[6] = "What is the most common tree in Estonia?,1,2,3,4,1";
 
-        randNb = Random.Range(0, QuizzList.Length);
+        randNb = Random.Range(0, 2);
         askQuestion(randNb);
     }
 
     // Update is called once per frame
     void Update()
     {
-        textScore.text = "score: " + score;
+
     }
 
     public void askQuestion(int nb)

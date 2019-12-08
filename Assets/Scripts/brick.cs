@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class brick : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class brick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnCollisionEnter2D(Collision2D col){
@@ -23,8 +24,16 @@ public class brick : MonoBehaviour
         {
             Regex regex = new Regex(@"BrickQuizer \(\d\)");
             Match match = regex.Match(gameObject.name);
-            if(match.Success){
+            if (match.Success)
+            {
                 //Debug.Log(match.Value);
+                bool pause = GameObject.Find("Panel").GetComponent<GameCommand>().paused;
+                pause = !pause;
+                Time.timeScale = pause ? 0 : 1;
+                SceneManager.LoadScene("Quizz", LoadSceneMode.Additive);
+                //Scene nextScene = SceneManager.GetSceneByName("Quizz");
+                //SceneManager.SetActiveScene(nextScene);
+
             }
             ui.IncrementScore();            
             Destroy(gameObject);
