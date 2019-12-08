@@ -29,7 +29,7 @@ public class Quizz : MonoBehaviour
         //Adding questions to quizz
         QuizzList[0] = "What is our teacher name?,Juan,Philip,Roman,Louis,Roman";
         QuizzList[1] = "6 x 4?,8,24,10,42,24";
-        QuizzList[2] = "What is the most common tree in Estonia?,1,2,3,4,1";
+        QuizzList[2] = "Did you learn anything in game dev classes?,Which one?,Yeh sure,Hell no,Who's Roman?,Yeh sure";
         QuizzList[3] = "What is the most common tree in Estonia?,1,2,3,4,1";
         QuizzList[4] = "What is the most common tree in Estonia?,1,2,3,4,1";
         QuizzList[5] = "What is the most common tree in Estonia?,1,2,3,4,1";
