@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Anwser : MonoBehaviour
 {
+
     void OnMouseDown()
     {
         string toto = GameObject.Find("Canvas").GetComponent<Quizz>().Anwser;

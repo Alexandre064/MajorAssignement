@@ -8,6 +8,7 @@ public class brick : MonoBehaviour
 {
     // Start is called before the first frame update
     public UiManager ui;
+    public static int nbrBrick = 13;
     void Start()
     {
         ui = GameObject.FindWithTag("ui").GetComponent<UiManager>();
@@ -22,6 +23,8 @@ public class brick : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag == "Ball")
         {
+            nbrBrick--;
+            /*
             Regex regex = new Regex(@"BrickQuizer \(\d\)");
             Match match = regex.Match(gameObject.name);
             if (match.Success)
@@ -34,7 +37,7 @@ public class brick : MonoBehaviour
                 //Scene nextScene = SceneManager.GetSceneByName("Quizz");
                 //SceneManager.SetActiveScene(nextScene);
 
-            }
+            }     */                 
             ui.IncrementScore();            
             Destroy(gameObject);
         }

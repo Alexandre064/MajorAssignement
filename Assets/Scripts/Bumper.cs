@@ -44,4 +44,6 @@ public class Bumper : MonoBehaviour
     {
         rd.velocity = Vector2.zero;
     }
+
+
 }

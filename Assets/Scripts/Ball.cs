@@ -10,7 +10,7 @@ public class Ball : MonoBehaviour
 
     public Rigidbody2D rb;
     bool gameStarted = false;
-
+    int nbrBrick = 13;
     void Start()
     { 
 
@@ -25,7 +25,11 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(rb.velocity);
+        if(collision.gameObject.tag == "Finish"){
+             GameControle.instance.gameFinishLoose();
+        }else if(brick.nbrBrick == 0){
+            GameControle.instance.gameFinishWin();
+        }
         //rb.AddForce(new Vector2(0,force));        
         if (rb.velocity.x == 0)
         {
