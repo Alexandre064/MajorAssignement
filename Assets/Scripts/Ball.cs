@@ -27,5 +27,13 @@ public class Ball : MonoBehaviour
     {
         Debug.Log(rb.velocity);
         //rb.AddForce(new Vector2(0,force));        
+        if (rb.velocity.x == 0)
+        {
+            rb.AddForce(new Vector2(force, 0));
+        }
+        if (rb.velocity.y == 0)
+        {
+            rb.AddForce(new Vector2(0, force));
+        }
     }
 }
