@@ -24,11 +24,16 @@ public class GameCommand : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            DestroyGameObject();
-            SceneManager.LoadScene("MainMenu");
+            BackToMainMenu();
         }
 
         Time.timeScale = paused ? 0 : 1;
+    }
+
+    public void BackToMainMenu()
+    {
+        DestroyGameObject();
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void DestroyGameObject()

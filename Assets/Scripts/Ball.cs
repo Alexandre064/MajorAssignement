@@ -25,9 +25,12 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Finish"){
+        if(collision.gameObject.tag == "Finish")
+        {
              GameControle.instance.gameFinishLoose();
-        }else if(brick.nbrBrick == 0){
+        }
+        else if(brick.nbrBrick == 0)
+        {
             GameControle.instance.gameFinishWin();
         }
         //rb.AddForce(new Vector2(0,force));        

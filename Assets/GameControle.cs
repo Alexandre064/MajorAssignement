@@ -25,19 +25,18 @@ public class GameControle : MonoBehaviour
     {
         if(gameOver == true && Input.GetKeyUp(KeyCode.Space))
         {
-            brick.nbrBrick = 13;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            GameObject.Find("Panel").GetComponent<GameCommand>().BackToMainMenu();
         }
     }
     public void gameFinishLoose()
     {
         gameOverText.SetActive(true);
-        Time.timeScale = 0;
+        GameObject.Find("Panel").GetComponent<GameCommand>().paused = true;
         gameOver = true;
     }
     public void gameFinishWin(){
         gameWinText.SetActive(true);
-        Time.timeScale = 0;
+        GameObject.Find("Panel").GetComponent<GameCommand>().paused = true;
         gameOver = true;
     }
 }
