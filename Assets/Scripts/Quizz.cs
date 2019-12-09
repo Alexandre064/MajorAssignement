@@ -30,7 +30,7 @@ public class Quizz : MonoBehaviour
         QuizzList[0] = "What is our teacher name?,Juan,Philip,Roman,Louis,Roman";
         QuizzList[1] = "6 x 4?,8,24,10,42,24";
         QuizzList[2] = "Did you learn anything in Roman class?,Which one?,Yeh sure,Hell no,Who's Roman?,Yeh sure";
-        QuizzList[3] = "Which game engine did we use for this game?,UE4,Unity,JMonkeyEngine,CryEngine,Unity";
+        QuizzList[3] = "Which game engine did we use for this game?,UE4,Unity,VisualStudio,CryEngine,Unity";
         QuizzList[4] = "What is the size of estonian forests?,50%,30%,75%,40%,50%";
         QuizzList[5] = "Select the city which is not Estonian,Tartu,Tallinn,Pärnu,Turku,Turku";
         QuizzList[6] = "What lake is the biggest one?,Ülemiste,Saadjärv,Peïpous,Võrtsjärv,Peïpous";
