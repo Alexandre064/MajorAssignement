@@ -24,11 +24,16 @@ public class GameCommand : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Destroy(GameObject.Find("Panel"));
-            Destroy(GameObject.Find("Ball"));
+            DestroyGameObject();
             SceneManager.LoadScene("MainMenu");
         }
 
         Time.timeScale = paused ? 0 : 1;
+    }
+
+    public void DestroyGameObject()
+    {
+        Destroy(GameObject.Find("Panel"));
+        Destroy(GameObject.Find("Ball"));
     }
 }

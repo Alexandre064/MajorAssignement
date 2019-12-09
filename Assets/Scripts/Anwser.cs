@@ -13,12 +13,12 @@ public class Anwser : MonoBehaviour
         if (GameObject.Find("CanvasQuizz").GetComponent<Quizz>().Anwser == transform.GetChild(0).GetComponent<TextMesh>().text)
         {
             Debug.Log("Won");
-            //GameObject.Find("Canvas").GetComponent<Quizz>().ui.score+=2;
+            GameObject.FindWithTag("ui").GetComponent<UiManager>().IncrementScore(10);
         }
         else
         {
             Debug.Log("Lose");
-            //nothing happens?
+            GameObject.FindWithTag("ui").GetComponent<UiManager>().IncrementScore(-5);
         }
         //Go to main scene
         int nb;

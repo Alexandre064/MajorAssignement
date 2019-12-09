@@ -22,4 +22,11 @@ public class UiManager : MonoBehaviour
         score++;
         scoreText.text = "Score : "+score;
     }
+
+    public void IncrementScore(int bonus)
+    {
+        score+=bonus;
+        scoreText.text = "Score : " + score;
+    }
+
 }
