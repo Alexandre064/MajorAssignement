@@ -21,10 +21,6 @@ public class Anwser : MonoBehaviour
             GameObject.FindWithTag("ui").GetComponent<UiManager>().IncrementScore(-5);
         }
         //Go to main scene
-        int nb;
-        nb = Random.Range(0, 3);
-        // GameObject.Find("Canvas").GetComponent<Quizz>().askQuestion(nb);
-        //SceneManager.LoadScene("Game");
         SceneManager.UnloadSceneAsync("Quizz");
         GameObject.Find("Panel").GetComponent<GameCommand>().paused = false;
     }

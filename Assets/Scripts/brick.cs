@@ -29,12 +29,9 @@ public class brick : MonoBehaviour
             Match match = regex.Match(gameObject.name);
             if (match.Success)
             {
-                //Debug.Log(match.Value);
                 GameObject.Find("Panel").GetComponent<GameCommand>().paused = true;
                 SceneManager.LoadSceneAsync("Quizz",LoadSceneMode.Additive);
-                //Scene nextScene = SceneManager.GetSceneByName("Quizz");
-                //SceneManager.SetActiveScene(nextScene);
-
+               
             }                    
             ui.IncrementScore();            
             Destroy(gameObject);
