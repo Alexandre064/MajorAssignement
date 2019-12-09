@@ -30,10 +30,8 @@ public class brick : MonoBehaviour
             if (match.Success)
             {
                 //Debug.Log(match.Value);
-                bool pause = GameObject.Find("Panel").GetComponent<GameCommand>().paused;
-                pause = !pause;
-                Time.timeScale = pause ? 0 : 1;
-                SceneManager.LoadScene("Quizz");
+                GameObject.Find("Panel").GetComponent<GameCommand>().paused = true;
+                SceneManager.LoadSceneAsync("Quizz",LoadSceneMode.Additive);
                 //Scene nextScene = SceneManager.GetSceneByName("Quizz");
                 //SceneManager.SetActiveScene(nextScene);
 
