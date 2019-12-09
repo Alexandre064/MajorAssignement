@@ -24,7 +24,7 @@ public class brick : MonoBehaviour
         if(col.gameObject.tag == "Ball")
         {
             nbrBrick--;
-            /*
+            
             Regex regex = new Regex(@"BrickQuizer \(\d\)");
             Match match = regex.Match(gameObject.name);
             if (match.Success)
@@ -33,11 +33,11 @@ public class brick : MonoBehaviour
                 bool pause = GameObject.Find("Panel").GetComponent<GameCommand>().paused;
                 pause = !pause;
                 Time.timeScale = pause ? 0 : 1;
-                SceneManager.LoadScene("Quizz", LoadSceneMode.Additive);
+                SceneManager.LoadScene("Quizz");
                 //Scene nextScene = SceneManager.GetSceneByName("Quizz");
                 //SceneManager.SetActiveScene(nextScene);
 
-            }     */                 
+            }                    
             ui.IncrementScore();            
             Destroy(gameObject);
         }
