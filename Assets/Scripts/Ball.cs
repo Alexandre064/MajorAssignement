@@ -11,9 +11,14 @@ public class Ball : MonoBehaviour
     public Rigidbody2D rb;
     bool gameStarted = false;
     int nbrBrick = 13;
+private AudioSource source { get { return GetComponent<AudioSource>(); } }
+    public AudioClip simpleBrickSound;
+    public AudioClip quizeBrickSound;
+
     void Start()
     { 
-
+        gameObject.AddComponent<AudioSource>();
+        source.playOnAwake = false;
     }
     void Update(){
         if(Input.GetKeyUp(KeyCode.Space)&& gameStarted == false){
@@ -25,9 +30,21 @@ public class Ball : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "BrickQuizer")
+        {
+            Debug.Log("okokok");
+            source.clip = quizeBrickSound;
+            source.PlayOneShot(quizeBrickSound);
+        }else{
+            source.clip = simpleBrickSound;
+            source.PlayOneShot(simpleBrickSound);
+        }
+
+
         if(collision.gameObject.tag == "Finish")
         {
-             GameControle.instance.gameFinishLoose();
+            brick.nbrBrick = 13;
+            GameControle.instance.gameFinishLoose();
         }
         else if(brick.nbrBrick == 0)
         {
