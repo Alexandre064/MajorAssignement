@@ -20,6 +20,7 @@ Some bricks contains questions and it is necesery to write right answer to conti
 - Florian Mouton 
 - Alexandre Cabanne
 - Milan Múčka
+- Eddy Garnier
 
 
 # Unity Version : 2019.2.15f
