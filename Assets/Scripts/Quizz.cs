@@ -13,7 +13,7 @@ public class Quizz : MonoBehaviour
     public string Anwser;
 
     private int randNb;
-    string[] QuizzList = new string[7];
+    string[] QuizzList = new string[10];
     
     // Start is called before the first frame update
     void Start()
