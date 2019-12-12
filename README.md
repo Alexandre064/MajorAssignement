@@ -3,7 +3,7 @@
 Game made for course Basics of Game Development on Tallinn University.
 
 Purpose of game is to destroy all bricks with the ball. 
-Some bricks contains questions and it is necesery to write right answer to continue the game.
+Some bricks contains questions. You earn bonus point if you anwser it right, but also lose some if you're wrong. Try to get the best score you can!
 
 ![](https://i.imgur.com/47WIrTT.png)
 
