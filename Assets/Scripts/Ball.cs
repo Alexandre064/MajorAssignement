@@ -48,6 +48,7 @@ private AudioSource source { get { return GetComponent<AudioSource>(); } }
         }
         else if(brick.nbrBrick == 0)
         {
+            brick.nbrBrick = 13;
             GameControle.instance.gameFinishWin();
         }
         //rb.AddForce(new Vector2(0,force));        

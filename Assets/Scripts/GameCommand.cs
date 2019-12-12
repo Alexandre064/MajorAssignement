@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameCommand : MonoBehaviour
 {
     public bool paused = false;
+    public GameObject text;
     // Start is called before the first frame update
     void Awake()
     {
@@ -20,7 +21,14 @@ public class GameCommand : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P))
         {
             paused = !paused;
-            
+            if (paused)
+            {
+                text.SetActive(true);
+            }
+            else
+            {
+                text.SetActive(false);
+            }
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
