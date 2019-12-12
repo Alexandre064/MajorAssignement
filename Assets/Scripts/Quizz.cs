@@ -29,13 +29,16 @@ public class Quizz : MonoBehaviour
         //Adding questions to quizz
         QuizzList[0] = "What is our teacher name?,Juan,Philip,Roman,Louis,Roman";
         QuizzList[1] = "6 x 4?,8,24,10,42,24";
-        QuizzList[2] = "Did you learn anything in Roman class?,Which one?,Yeh sure,Hell no,Who's Roman?,Yeh sure";
+        QuizzList[2] = "When was the formal independence of Estonia?,20 August 1991,14 June 1818,9 November 1989,1 January 1990,20 August 1991";
         QuizzList[3] = "Which game engine did we use for this game?,UE4,Unity,VisualStudio,CryEngine,Unity";
         QuizzList[4] = "What is the size of estonian forests?,50%,30%,75%,40%,50%";
         QuizzList[5] = "Select the city which is not Estonian,Tartu,Tallinn,Pärnu,Turku,Turku";
         QuizzList[6] = "What lake is the biggest one?,Ülemiste,Saadjärv,Peïpous,Võrtsjärv,Peïpous";
+        QuizzList[7] = "Who is Estonian Prime Minister?,Mart Helme,Siim Kallas,Jüri Ratas,I don't know,Jüri Ratas";
+        QuizzList[8] = "How populous is Estonia?,1 319 133,1 000 874,574 215,at least 1,1 319 133";
+        QuizzList[9] = "Is Estonia part of the EU?,Yes,No,Maybe,I dont know,Yes";
 
-        randNb = Random.Range(0, 6);
+        randNb = Random.Range(0, QuizzList.Length);
         askQuestion(randNb);
     }
 
